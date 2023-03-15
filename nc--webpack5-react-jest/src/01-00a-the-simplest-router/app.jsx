@@ -1,12 +1,16 @@
 import React from "react"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import {
+  createBrowserRouter,
+  RouterProvider,
+  createRoutesFromElements,
+  Route
+} from "react-router-dom"
 
-// const routes = [
-//   {
-//     path: "/",
-//     element: <div>Hello world!</div>,
-//   },
-// ]
+const routeObject = {
+  path: "/",
+  element: <div>Hello world!</div>,
+}
+// const routes = [ routeObject ]
 
 const routes = createRoutesFromElements(
   <Route
