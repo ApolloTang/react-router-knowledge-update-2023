@@ -1,4 +1,26 @@
-import React from "react";
+import React from "react"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
-const App = () => <h1>React component</h1>
-export {App}
+// const routes = [
+//   {
+//     path: "/",
+//     element: <div>Hello world!</div>,
+//   },
+// ]
+
+const routes = createRoutesFromElements(
+  <Route
+    element={<div>Hello world!</div>}
+    path="/"
+  />
+)
+
+const router = createBrowserRouter(routes)
+
+const App = () => (
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+)
+
+export { App }
