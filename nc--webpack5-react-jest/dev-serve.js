@@ -38,6 +38,10 @@ function start(port, host) {
     port: port,
     host: host,
     open: true,
+    historyApiFallback: true,
+      // for historyApiFallback to work
+      // must also specified output.publicPath
+      // in webpack.config.js
     hot: true, // Dev server client for web socket transport, hot and live reload logic
     client : {
       logging: 'info',

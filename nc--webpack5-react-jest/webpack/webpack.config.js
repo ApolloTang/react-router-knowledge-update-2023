@@ -15,6 +15,11 @@ const commonConfig = ({ pathToEntryFile, absPathToFonts, absPathToTsConfig }) =>
   {
     devtool: 'inline-source-map',
     entry: [ pathToEntryFile ],
+    output: {
+      //  must specified output.publicPath otherwise
+      //  devServer.historyApiFallback will not work
+      publicPath: '/'
+    },
     resolve: {
       alias: {
         '~': path.resolve(pathToEntryFile, '..')
