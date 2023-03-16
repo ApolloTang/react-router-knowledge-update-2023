@@ -14,17 +14,17 @@ import ErrorPage from "./error-page"
 const routeObject = {
   path: "/",
   element: <Root />,
-  // errorElement: <ErrorPage />,
+  errorElement: <ErrorPage />,
 }
-const routes = [ routeObject ]
+// const routes = [ routeObject ]
 
-// const routes = createRoutesFromElements(
-//   <Route
-//     element={<Root/>}
-//     errorElement={<ErrorPage/>}
-//     path="/"
-//   />
-// )
+const routes = createRoutesFromElements(
+  <Route
+    element={<Root/>}
+    errorElement={<ErrorPage/>}
+    path="/"
+  />
+)
 
 const router = createBrowserRouter(routes)
 
