@@ -81,7 +81,7 @@ export default function Root() {
           </Form>
         </div>
         <nav>
-          <Link to={'contacts/does_not_exist'}> does not exist </Link>
+          <Link to={'contacts/does_not_exist'}> demo does not exist </Link>
           {contacts.length ? (
             <ul>
               {contacts.map((contact) => (
